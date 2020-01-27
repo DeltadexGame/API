@@ -1,17 +1,19 @@
 name: member_api
 version: 0.1.0
+crystal: 0.32.1
+license: MIT
 
 authors:
   - Michael Forde <fordetek@gmail.com>
-
-dependencies:
-  kemal:
-    github: kemalcr/kemal
 
 targets:
   member_api:
     main: src/member_api.cr
 
-crystal: 0.32.1
-
-license: MIT
+dependencies:
+    kemal:
+        github: kemalcr/kemal
+    pg:
+        github: will/crystal-pg
+    dotenv:
+        github: gdotdesign/cr-dotenv

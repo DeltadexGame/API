@@ -1,18 +1,15 @@
 require "kemal"
+require "dotenv"
+require "pg"
 
-module MemberApi
 
-  get "/" do
-    "Welcome to a cool api!"
-  end
+require "./api/views/*"
+require "./api/models/*"
+require "./api/db/*"
+require "./api/*"
 
-  post "/auth/login" do |env|
-    username = env.params.json["username"].as(String)
-    password = env.params.json["password"].as(String)
-    env.response.content_type = "application/json"
-    {content: {username: username, password: password}}.to_json
-  end
+	
+Dotenv.load
 
-end
-
+# Run Kamel
 Kemal.run
