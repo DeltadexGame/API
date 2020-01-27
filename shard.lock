@@ -1,5 +1,13 @@
 version: 1.0
 shards:
+  admiral:
+    github: jwaldrip/admiral.cr
+    commit: d11fc4863154f3dbd933421bdf45d356a2550e07
+
+  clear:
+    github: anykeyh/clear
+    commit: 06491e089324e6eb72317a8568eb647525e3a41f
+
   db:
     github: crystal-lang/crystal-db
     version: 0.8.0
@@ -11,6 +19,14 @@ shards:
   exception_page:
     github: crystal-loot/exception_page
     version: 0.1.2
+
+  generate:
+    github: anykeyh/generate.cr
+    commit: 27a59d663ded8ce39a361e3a88b8dd747f59ce42
+
+  inflector:
+    github: phoffer/inflector.cr
+    version: 0.1.8
 
   kemal:
     github: kemalcr/kemal

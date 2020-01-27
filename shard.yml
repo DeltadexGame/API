@@ -17,3 +17,6 @@ dependencies:
         github: will/crystal-pg
     dotenv:
         github: gdotdesign/cr-dotenv
+    clear:
+        github: anykeyh/clear
+        branch: master
