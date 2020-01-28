@@ -1,5 +1,5 @@
 require "kemal"
-require "dotenv"
+# require "dotenv"
 require "pg"
 require "clear"
 
@@ -8,10 +8,10 @@ require "./api/models/*"
 require "./api/db/*"
 require "./api/*"
 
-Dotenv.load
+# Dotenv.load
 
 Clear::SQL.init(
-    "postgres://postgres@localhost/my_database", 
+    "postgres://postgres:password@localhost/member_api", 
     connection_pool_size: 5,
 )
 

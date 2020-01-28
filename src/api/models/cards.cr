@@ -5,8 +5,8 @@ class Cards
   
     column name : String
   
-    column healt : Int?
-    column attack : Int?
+    column healt : Int64?
+    column attack : Int64?
     column ability : String?
 
 end
