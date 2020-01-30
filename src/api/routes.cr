@@ -1,11 +1,15 @@
 get "/" do 
 	index
 end
-  	
-post "/auth/login" do |env|
-	auth_login(env)
+
+get "/auth"  do
+	list_users
 end
 
 post "/auth/register" do |env|
-	auth_register(env)
+	register(env)
+end
+
+post "/auth/login" do |env|
+	login(env)
 end

@@ -1,16 +1,19 @@
 class User
     include Clear::Model
   
-    column id : Int64, primary: true
+    column id : Int64, primary: true, presence: false
   
     column username : String
   
-    column first_name : String?
-    column last_name : String?
+    column password : Crypto::Bcrypt::Password
   
-    column encrypted_password : Crypto::Bcrypt::Password
-  
-    def password=(x)
-      self.encrypted_password = Crypto::Bcrypt::Password.create(password)
+    def encrypt_password(password : String)
+      self.password = self.encrypt(password)
     end
+
+    def encrypt(x : String)
+      encrypt = Crypto::Bcrypt::Password.create(x)
+      return encrypt
+    end
+
 end
