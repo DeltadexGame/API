@@ -1,11 +1,11 @@
-class Cards
+class Card
     include Clear::Model
   
     column id : Int64, primary: true
   
     column name : String
   
-    column healt : Int64?
+    column health : Int64?
     column attack : Int64?
     column ability : String?
 

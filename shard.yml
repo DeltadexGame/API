@@ -17,6 +17,8 @@ dependencies:
         github: will/crystal-pg
     dotenv:
         github: gdotdesign/cr-dotenv
+    kemal-basic-auth:
+        github: kemalcr/kemal-basic-auth
     clear:
         github: anykeyh/clear
         branch: master
