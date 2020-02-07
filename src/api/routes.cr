@@ -3,8 +3,8 @@ get "/" do
 end
 
 # Auth
-get "/auth"  do
-	list_users
+post "/auth"  do |request|
+	list_users(request)
 end
 
 post "/auth/register" do |request|

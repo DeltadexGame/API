@@ -12,8 +12,8 @@ class TokenStore
     end
 
     def get_id_token(token : String)
-        token_object = @token[token]
-        token.object.user_id
+        token_object = @tokens[token]
+        token_object.user_id
     end
 
 end
