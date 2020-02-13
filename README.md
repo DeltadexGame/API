@@ -1,6 +1,9 @@
 # member_api
 
-TODO: Write a description here
+### Endpoints
+* Register - POST - `/auth/register` - arguments: username, password - returns 200 or 501
+* Login - POST - `/auth/login` - arguments: username, password - returns 200 or 405
+* Verify Token - POST - `/auth` - arguments: token - returns 200 or 405
 
 ## Installation
 
