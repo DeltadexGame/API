@@ -1,3 +1,6 @@
+# TokenStore acts like an object shelf for storing
+# objects, it has one parameter
+# :tokens: a hashmap of tokens
 class TokenStore
 
     def initialize

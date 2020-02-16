@@ -1,3 +1,7 @@
+# Token is a class that depicts a `token` object
+# with two parameters.
+# :token: a randomly generated HEX32 string
+# :user_id: the id of the authenticated user
 class Token
     @token : String
 
@@ -15,6 +19,8 @@ class Token
     end
 end
 
+# generate_token generates a random HEX32 string to be
+# used in a `token` object
 def generate_token
     token = Random::Secure.hex(32)
     token.to_s

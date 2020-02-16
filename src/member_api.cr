@@ -1,7 +1,10 @@
+# Libs
+
 require "kemal"
-# require "dotenv"
 require "pg"
 require "clear"
+
+# Local
 
 require "./api/views/*"
 require "./api/models/*"
@@ -13,10 +16,24 @@ require "./api/*"
 
 TOKENS = TokenStore.new
 
+# Database Details
+
+DB_USER = "postgres"
+DB_PASS = "password"
+DB_HOST = "localhost"
+DB_NAME = "member_api"
+
+# Postgres
+
+PG_PATH = "postgres://#{DB_USER}:#{DB_PASS}@#{DB_HOST}"
+
+# DB connection
+
 Clear::SQL.init(
-    "postgres://postgres:password@localhost/member_api",
+    "#{PG_PATH}/#{DB_NAME}",
     connection_pool_size: 5,
 )
 
 # Run Kamel
+
 Kemal.run

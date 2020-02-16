@@ -1,26 +1,26 @@
+
+##-------------## Index ##-------------##
+
+# Index page for API
 get "/" do 
 	index
 end
 
-# Auth
+##-------------## Auth ##-------------##
+
+# Token Verify Endpoint
 post "/auth"  do |request|
-	list_users(request)
+	verify_token(request)
 end
 
+# User Register
 post "/auth/register" do |request|
 	register(request)
 end
 
+# User Login
 post "/auth/login" do |request|
 	login(request)
 end
 
-# Cards
-
-# get "/cards" do
-# 	list_cards
-# end
-
-# post "/cards/create" do |request|
-# 	add_card(request)
-# end
+##-------------## Statistics ##-------------##

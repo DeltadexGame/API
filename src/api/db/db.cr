@@ -1,8 +1,5 @@
 require "pg"
 
-DB_NAME = "member_api"
-PG_PATH = "postgres://postgres:password@localhost"
-
 # Creates connection with the default postgres db
 conn = PG.connect("#{PG_PATH}/postgres")
 
@@ -22,7 +19,8 @@ conn.exec(%{
     CREATE TABLE users (
         id                   SERIAL PRIMARY KEY,
         username             TEXT NOT NULL,
-        password   TEXT NOT NULL
+        password             TEXT NOT NULL,
+        user_type            SERIAL NOT NULL
     );
 })
 puts "Process finished succesfully"
