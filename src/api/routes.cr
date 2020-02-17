@@ -1,3 +1,5 @@
+include Index
+include Auth
 
 ##-------------## Index ##-------------##
 

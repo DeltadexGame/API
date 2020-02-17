@@ -24,4 +24,4 @@ end
 def generate_token
     token = Random::Secure.hex(32)
     token.to_s
-end
+end 
