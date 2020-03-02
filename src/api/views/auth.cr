@@ -1,4 +1,4 @@
-module Auth
+module AuthView
 
     # Verify_tokens is an endpoint that is called using a
     # POST request to `/auth` with one parameter `token` which is
@@ -29,6 +29,9 @@ module Auth
             {errors: errors}.to_json
         else
             user.save
+            dex = Dex.new
+            dex.user_id = user.id
+            dex.save
         end
     end
 

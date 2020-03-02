@@ -1,4 +1,4 @@
-module Index
+module IndexView
     
     # **Index** Endpoint serves as Home page for API
     def index

@@ -1,5 +1,6 @@
-include Index
-include Auth
+include IndexView
+include AuthView
+include DexView
 
 ##-------------## Index ##-------------##
 
@@ -12,17 +13,23 @@ end
 
 # Token Verify Endpoint
 post "/auth"  do |request|
-	verify_token(request)
+	verify_token request
 end
 
 # User Register
 post "/auth/register" do |request|
-	register(request)
+	register request
 end
 
 # User Login
 post "/auth/login" do |request|
-	login(request)
+	login request
+end
+
+##-------------## Dexs ##-------------##
+
+post "/dex" do |request|
+	get_dex request
 end
 
 ##-------------## Statistics ##-------------##
